@@ -1,5 +1,6 @@
 import os
 
+
 ##########################
 #***LISTANDO DIRETÓRIOS***
 ##########################
@@ -24,3 +25,44 @@ print("#"*60)
 #######################
 #***CRIAR DIRETÓRIOS***
 #######################
+
+#Criando diretórios na pasta atual
+pasta_I = 'primeiro_teste'
+os.mkdir(pasta_I)
+print("A pasta {} foi criado".format(pasta_I))
+print("#"*60)
+
+#criando diretórios em outras pastas
+pasta = "Teste_Curso_Python_OS"
+os.mkdir(r"C:\Users\renat\Desktop\{}".format(pasta))
+print("#"*60)
+
+#criando pasta dentro de outra pasta no mesmo diretório
+pasta_II = "segundo_teste"
+os.mkdir("primeiro_teste\\{}".format(pasta_II))
+print("A pasta II {} foi criado".format(pasta_II))
+print("#"*60)
+
+#criando mais de uma pasta dentro da outra de uma só vez
+#não é possível criar pastas de forma recursiva
+
+#criando dois diretórios dentro do outro de uma só vez (para casos recursivos)
+diretorio_1 = 'diretorio_1'
+diretorio_2 = 'diretorio_2'
+diretorio_3 = 'diretorio_3'
+diretorio_4 = 'diretorio_4'
+os.makedirs(diretorio_1+"\\"+diretorio_2+"\\"+diretorio_3+"\\"+diretorio_4)
+
+
+######################################
+#***MOVENDO E RENOMEANDO DIRETÓRIOS***
+######################################
+
+#renomeando um arquivo.txt
+os.rename('arquivo1.txt', 'arquivo1_renomeado.txt')
+
+#renomeando uma pasta
+os.rename(diretorio_1,'diretorio_111')
+
+#renomeando o arquivo e movendo ele para outra pasta
+os.rename('arquivo1_renomeado.txt', "diretorio_111\\arquivo1_renomeado.txt")
