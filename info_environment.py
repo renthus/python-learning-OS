@@ -20,7 +20,23 @@ nome_processo_atual = os.getpid()
 print("O id do processo que está sendo utilizado é o: {}".format(nome_processo_atual))
 print("#"*60)
 
-#captura o caminho atual
+#captura o caminho atual através do diretório
 caminho_atual = os.getcwd()
 print("O caminho deste arquivo é o: {}".format(caminho_atual))
+print("#"*60)
+
+#captura o arquivo atual
+print("O nome do diretório do arquivo atual é: ",__file__)
+print("#"*60)
+
+#nome do arquivo
+print("Nome do arquivo atual: ",os.path.basename(__file__))
+print("#"*60)
+
+#pasta do arquivo
+print("O nome da pasta do arquivo é: ", os.path.dirname(__file__))
+print("#"*60)
+
+#capturar a pasta + nome do arquivo (caminho absoluto)
+print("O caminho absoluto do arquivo é: ", os.path.abspath(__file__))
 print("#"*60)
