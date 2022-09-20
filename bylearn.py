@@ -242,3 +242,32 @@ else:
 os.mkdir('desafio')
 open('desafio\\nome.txt', 'w+') #write => deleta o conteúdo e escreve novamente
 ###############################################################################
+
+#######################
+#######################
+
+
+###################################################
+#***DESAFIO - PASTAS E ARQUIVOS***
+#criar 10 pastas onde cada pasta possui 10 arquivos
+###################################################
+
+import os
+
+diretorio = 'desafio'
+
+#verificando se a pasta principal - diretório existe
+if not os.path.exists(diretorio):
+    os.mkdir(diretorio)
+####################################################
+
+#criando as pastas e os arquivos dentro das pastas
+for i in range(1,11):
+    if not os.path.exists(diretorio + "\\pasta_" + str(i)):
+        os.mkdir(diretorio + "\\pasta_" + str(i))
+    for j in range(1,11):
+        open(diretorio + "\\pasta_" + str(i) + "\\arquivo_" + str(j) + ".txt", "w+")
+    ####################################################################################
+
+###################################################
+###################################################
