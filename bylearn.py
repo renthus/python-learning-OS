@@ -1,4 +1,4 @@
-import os, platform
+import os, platform, shutil
 
 #verificando o nome do sistema operacional
 nome_do_os = os.name
@@ -142,7 +142,7 @@ import os
 import shutil
 
 #copia um arquivo em sua origem para a pasta de destino
-pasta_arquivo_origem = os.getcwd() + "\\arquivo_1.txt"
+pasta_arquivo_origem = os.getcwd() + "\\arquivo1.txt"
 pasta_destino = os.getcwd() + "\\diretorio_1"
 shutil.copy2(pasta_arquivo_origem,pasta_destino)
 #######################################################
@@ -173,3 +173,62 @@ copy_tree(pasta_origem, pasta_destino)
 #################################
 #################################
 
+
+##################################
+#***REMOVENDO ARQUIVOS E PASTAS***
+##################################
+
+#removendo um arquivo (NÃO REMOVE PASTAS)
+os.remove("primeiro_teste\\arquivo1_renomeado.txt")
+###################################################
+
+#remove pastas (NÃO REMOVE PASTAS CASO NÃO ESTEJAM VAZIAS
+os.removedirs("primeiro_teste\\diretorio_2\\diretorio_3\\diretorio_4")
+os.removedirs("diretorio_1\\diretorio_2\\diretorio_3\\diretorio_4")
+######################################################################
+
+#remove a pasta e todo o seu conteúdo passando por parâmetro
+#a localização da pasta
+shutil.rmtree("primeiro_teste")
+shutil.rmtree("diretorio_1")
+############################################################
+
+##################################
+##################################
+
+
+#################################################
+#***CHECANDO A EXISTÊNCIA DE ARQUIVOS E PASTAS***
+#################################################
+
+import os.path
+
+#verifica se uma pasta existe e caso não exista, cria uma
+if not os.path.isdir('desafio'):
+    os.mkdir("desafio")
+if not os.path.isdir('desafio\\teste'):
+    os.mkdir('desafio\\teste')
+#########################################################
+
+#verifica se um arquivo existe numa determinada pasta
+if not os.path.isfile('desafio\\arquivo.txt'):
+    print("Arquivo não existe")
+else:
+    print("Arquivo existe")
+#####################################################
+
+#verifica se um arquivo ou pasta existem
+#pasta
+if not os.path.exists('desafio'):
+    os.mkdir("desafio")
+if not os.path.exists('desafio\\teste'):
+    os.mkdir('desafio\\teste')
+#arquivo
+if not os.path.exists('desafio\\arquivo.txt'):
+    print("Arquivo não existe")
+else:
+    print("Arquivo existe")
+########################################
+
+#################################################
+#################################################
