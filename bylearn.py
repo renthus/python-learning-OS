@@ -232,3 +232,13 @@ else:
 
 #################################################
 #################################################
+
+
+#######################
+#***CRIANDO ARQUIVOS***
+#######################
+
+# open('desafio\\nome.txt', 'a') #appende => adiciona o conteúdo e não deleta
+os.mkdir('desafio')
+open('desafio\\nome.txt', 'w+') #write => deleta o conteúdo e escreve novamente
+###############################################################################
