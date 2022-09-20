@@ -22,7 +22,7 @@ This project has a goal practiced exercises and examples during the process lear
 
 :heavy_check_mark: `Source:` BYLEARN
 
-:heavy_check_mark: `Source:` HASTAG
+:heavy_check_mark: `Source:` HASHTAG
 
 ## Technologies used
 
